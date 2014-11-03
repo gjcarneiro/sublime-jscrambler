@@ -1,0 +1,46 @@
+[
+    {
+        "caption": "Tools",
+        "id": "tools",
+        "children": [
+            {
+                "command": "jscrambler",
+                "args": {},
+                "caption": "JScrambler"
+            }
+        ]
+    },
+    {
+        "caption": "Preferences",
+        "mnemonic": "n",
+        "id": "preferences",
+        "children":
+        [
+        {
+            "caption": "Package Settings",
+            "mnemonic": "P",
+            "id": "package-settings",
+            "children":
+            [
+            {
+                "caption": "JScrambler",
+                "children":
+                [
+                {
+                    "command": "open_file",
+                    "args": {"file": "${packages}/JScrambler/sublime_jscrambler.sublime-settings"},
+                    "caption": "Settings – Default"
+                },
+                {
+                    "command": "open_file",
+                    "args": {"file": "${packages}/User/sublime_jscrambler.sublime-settings"},
+                    "caption": "Settings – User"
+                }
+                ]
+            }
+            ]
+        }
+        ]
+    }
+]
+

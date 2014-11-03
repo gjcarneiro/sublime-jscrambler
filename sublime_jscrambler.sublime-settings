@@ -1,0 +1,53 @@
+{
+    //
+    // Set to true if you want to interface with jscrambler using an external
+    // commmand-line tool.
+    //
+
+    //  If use_external_tool == false, then this Sublime Text plugin will
+    //  communicate with server using ST's own Python runtime.  This means that
+    //  it doesn't support HTTPS.  On the plus side, you don't need to install
+    //  anything else, the plugin is self-contained.
+    //
+    //  If use_external_tool == true, then the plugin will instead invoke an
+    //  external tool.  This requires that you have Python at least 2.7
+    //  installed in your system and that you install the jscrambler python
+    //  module (pip install jscrrambler).  However, with this metho you can
+    //  support HTTPS.
+    //
+
+    "use_external_tool": false,
+
+
+    //
+    // These settings are used if use_external_tool is false:
+    //
+
+    "keys": {
+        "accessKey": "YOUR_ACCESS_KEY",
+        "secretKey": "YOUR_SECRET_KEY"
+    },
+    "host": "api.jscrambler.com",
+
+    // Unfortunately ST doesn't support https,
+    // see http://sublimetext.userecho.com/topic/50801-bundle-python-ssl-module/
+    "port": "80",
+
+    "params": {
+        "whitespace": "%DEFAULT%",
+        "rename_local": "%DEFAULT%",
+        "function_outlining": "false",
+        "rename_all": "false"
+    },
+
+    //
+    // These settings are used if use_external_tool is true:
+    //
+
+    // script name or full path for the external tool
+    "external_tool": "jscrambler-tool",
+
+    // Further settings for the external tool, such as API keys, should be
+    // placed in the `.jscrambler` file in your home dir: ~/.jscrambler
+
+}
